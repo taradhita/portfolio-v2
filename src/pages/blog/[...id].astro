@@ -1,6 +1,5 @@
 ---
 import Breadcrumbs from '@/components/Breadcrumbs.astro'
-import Link from '@/components/Link.astro'
 import PostHead from '@/components/PostHead.astro'
 import PostNavigation from '@/components/PostNavigation.astro'
 import SubpostsHeader from '@/components/SubpostsHeader.astro'
@@ -144,7 +143,8 @@ const tocSections = await getTOCSections(currentPostId)
                       height={20}
                       class="rounded-full"
                     />
-                    {author.isRegistered ? (
+                    <span>{author.name}</span>
+                    {/* {author.isRegistered ? (
                       <Link
                         href={`/authors/${author.id}`}
                         underline
@@ -154,7 +154,7 @@ const tocSections = await getTOCSections(currentPostId)
                       </Link>
                     ) : (
                       <span>{author.name}</span>
-                    )}
+                    )} */}
                   </div>
                 ))}
               </div>

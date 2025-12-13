@@ -1,8 +1,8 @@
 ---
 import Breadcrumbs from '@/components/Breadcrumbs.astro'
-import Link from '@/components/Link.astro'
 import PageHead from '@/components/PageHead.astro'
 import ProjectCard from '@/components/ProjectCard.astro'
+import { Badge } from '@/components/ui/badge'
 import Layout from '@/layouts/Layout.astro'
 import { getAllProjects } from '@/lib/data-utils'
 
@@ -17,28 +17,35 @@ const projects = await getAllProjects()
     <div class="min-w-full">
       <div class="prose mb-8">
         <p class="mt-0">
-          astro-erudite is an opinionated, unstyled static blogging template
-          that prioritizes simplicity and performance, built with <Link
-            href="https://astro.build"
-            external
-            underline>Astro</Link
-          >, <Link href="https://tailwindcss.com" external underline
-            >Tailwind</Link
-          >, and <Link href="https://ui.shadcn.com" external underline
-            >shadcn/ui</Link
-          >. It provides a clean foundation for your content while being
-          extremely easy to customize.
+          Hi, my name is Nadia Taradhita but you can just call me <b>Tara</b>.
         </p>
         <p>
-          To learn more about the philosophy behind this template, check out the
-          following blog post: <Link
-            href="/blog/the-state-of-static-blogs"
-            underline>The State of Static Blogs in 2024</Link
-          >.
+          My first exposure to coding was in high school when I started
+          customizing HTML themes on my Tumblr page. Fast forward since then, I
+          graduated with a Bachelor of Computer Science degree from Udayana
+          University and currently I am very grateful to develop numerous
+          services as a back end developer at Timedoor Indonesia.
         </p>
       </div>
 
-      <h2 class="mb-4 text-2xl font-medium">Example Projects Listing</h2>
+      <h2 class="mb-4 text-2xl font-medium">Tech Stacks</h2>
+      <div class="mb-8 flex flex-wrap justify-center gap-2">
+        <Badge variant="outline">PHP</Badge>
+        <Badge variant="outline">Laravel</Badge>
+        <Badge variant="outline">JavaScript</Badge>
+        <Badge variant="outline">Node.js</Badge>
+        <Badge variant="outline">Express.js</Badge>
+        <Badge variant="outline">TypeScript</Badge>
+        <Badge variant="outline">NestJS</Badge>
+        <Badge variant="outline">Python</Badge>
+        <Badge variant="outline">Go</Badge>
+        <Badge variant="outline">MySQL</Badge>
+        <Badge variant="outline">PostgreSQL</Badge>
+        <Badge variant="outline">Vue.js</Badge>
+        <Badge variant="outline">AWS</Badge>
+      </div>
+
+      <h2 class="mb-4 text-2xl font-medium">Projects</h2>
       <div class="flex flex-col gap-4">
         {projects.map((project) => <ProjectCard project={project} />)}
       </div>
