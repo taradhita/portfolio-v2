@@ -21,7 +21,7 @@ import tailwindcss from '@tailwindcss/vite'
 import netlify from '@astrojs/netlify';
 
 export default defineConfig({
-  site: 'https://https://rainbow-naiad-f40714.netlify.app/',
+  site: 'https://taradhita.netlify.app/',
 
   integrations: [
     expressiveCode({
